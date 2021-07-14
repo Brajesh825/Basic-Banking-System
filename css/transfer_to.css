@@ -1,0 +1,67 @@
+body{
+    background: linear-gradient(rgb(180, 103, 103),rgb(92, 92, 185),rgb(221, 74, 98))
+}
+
+.main{
+        margin-top: 15vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+}
+.sub-main{
+        width: 250px;
+        height: 200px;
+        margin: 10px;
+        padding: 10px;
+        background: rgb(111, 111, 206);
+        color: white;
+        text-align: center;
+}
+select,input{
+    width: 200px;
+    height: 27px; 
+    margin: 3px;
+
+}
+input{
+    margin-left: 4px;
+}
+
+.buttons{
+    width: 150px;
+    height: 35px;
+    border-radius: 20%;
+    border: none;
+    margin-top: 20px;
+}
+.buttons:hover{
+    background-color:rgb(0, 0, 10);
+    color: rgb(255, 255, 255);
+    width: 160px;
+    height: 38px;
+}
+.submit{
+    margin: 15px;
+}
+.back{
+    margin: 0px;
+}
+.home{
+    margin:5px;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+}
+.home:hover{
+    font-size: 30px;
+    color: rgb(33, 20, 220);
+    background-color: rgb(230, 215, 197);
+    width: 54px;
+    height: 54px;
+}
+form{
+    margin: 0%;
+}
