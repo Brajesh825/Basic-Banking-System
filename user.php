@@ -46,15 +46,11 @@ if($_SESSION['name']!=null){
 				</tr>
 			</table>
 			<br>
-			<br>
-
 			<div>
 			<a href="transfer_to.php">
 			<button type="button" class="buttons">Transfer To</button>
 			</a>
 			</div>
-			<br>
-			<br>
 			<div>
 				<a href="ministatement.php">
 				<button type="button" class="buttons">Mini Statement</button>
@@ -64,9 +60,13 @@ if($_SESSION['name']!=null){
     </body>
 </html>
 <?php }
+
+
 else{
-	echo '
-	 <script>alert ("Lost in Time and Space");</script>
-	';
+	echo"<script type='text/javascript'>
+    setTimeout(function () {
+        window.location.href= 'index.php';
+     },1000);
+    </script>"; 
 	}
 ?>

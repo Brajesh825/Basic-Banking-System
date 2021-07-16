@@ -3,11 +3,12 @@ require "assets/config.php";
 $name=$_SESSION['name'];
 $q="select name from users where not name='$name'";
 $result=mysqli_query($con,$q);
-
 if($name==null){ 
-	echo '
-	 <script>alert ("Lost in Time and Space");</script>
-	';
+	echo"<script type='text/javascript'>
+    setTimeout(function () {
+        window.location.href= 'index.php';
+     },1000);
+    </script>"; 
 }
 else{
 ?>
@@ -27,7 +28,7 @@ else{
 	
 	<div class="main">
 		<div class="sub-main">
-			<form action="checkcredit.php" method="post" class="transfer-form">
+			<form action="credit_verification.php" method="post" class="transfer-form">
 			
 				<label for="receiver">Receiver</label>
 				<select name="receiver">

@@ -36,7 +36,7 @@ if ( $sender_balance >= $_POST["transfer"] )
     $q1="update users set current_balance='$sum' where name='$to' ";
     $result=mysqli_query($con,$q1);
 	$transfer=$_POST["transfer"];
-	$q1="insert into mini_statement(sender,receiver,amount)
+	$q1="insert into transaction(sender,receiver,amount)
 		values('$from','$to',$transfer)";
 	$result=mysqli_query($con,$q1);
     $message="Successful transfer";
@@ -44,7 +44,7 @@ if ( $sender_balance >= $_POST["transfer"] )
    echo"<script type='text/javascript'>
     alert('$message');
     setTimeout(function () {
-        window.location.href= 'getdetail.php';
+        window.location.href= 'viewusers.php';
      },1000);
     </script>";    
 }
@@ -53,7 +53,7 @@ else
    $message="Insufficient Balance";
    echo"<script type='text/javascript'>alert('$message');
    setTimeout(function () {
-    window.location.href= 'getdetail.php';
+    window.location.href= 'viewusers.php';
  },1000);
    </script>";
    

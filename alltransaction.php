@@ -1,21 +1,16 @@
 <?php
 require "assets/config.php";
-$q="select * from mini_statement";
+$q="select * from transaction";
 $result=mysqli_query($con,$q);
-
 ?>
-<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Transaction</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Transaction</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/transaction.css">
-	<style>
-		
-	</style>
+		<link rel="stylesheet" href="css/alltransaction.css">
 	</head>
 	<body>
 		<a href="index.php">

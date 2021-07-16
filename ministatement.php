@@ -1,7 +1,7 @@
 <?php
 require "assets/config.php";
 $name=$_SESSION['name'];
-$q="select sender,amount from mini_statement where receiver='$name'";
+$q="select sender,amount from transaction where receiver='$name'";
 $result=mysqli_query($con,$q);
 ?>
 <!DOCTYPE html>
@@ -17,11 +17,13 @@ $result=mysqli_query($con,$q);
 
 
 	<body >	
-	<a href="index.php">
-		<button class="btn"><i class="fa fa-home"></i></button>
-	</a>
+		<a href="index.php">
+			<button class="home"><i class="fa fa-home"></i></button>
+		</a>
 		<h2><?php echo "Mini Statement of ".$name?></h2>
-		<table class="flat-table-1">
+		
+		<div>
+		<table>
 			<tr>
 				<th>Sender</th>
 				<th>Credits</th>
@@ -33,7 +35,9 @@ $result=mysqli_query($con,$q);
 			</tr>
 			<?php } ?>
 		</table>
-		<div>
-		
+		<form action="user.php" method="post">
+				<button  class="buttons back" type="submit" name="name" value="<?php echo $name ?>">BACK</button>
+		</form>		
+		</div>
 	</body>
 </html>
