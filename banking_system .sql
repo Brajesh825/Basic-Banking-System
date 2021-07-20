@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 14, 2021 at 10:49 AM
+-- Generation Time: Jul 20, 2021 at 02:22 PM
 -- Server version: 8.0.25-0ubuntu0.20.04.1
 -- PHP Version: 7.4.3
 
@@ -24,26 +24,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mini_statement`
+-- Table structure for table `transaction`
 --
 
-CREATE TABLE `mini_statement` (
+CREATE TABLE `transaction` (
   `sender` varchar(50) NOT NULL,
   `receiver` varchar(50) NOT NULL,
   `amount` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `mini_statement`
+-- Dumping data for table `transaction`
 --
 
-INSERT INTO `mini_statement` (`sender`, `receiver`, `amount`) VALUES
+INSERT INTO `transaction` (`sender`, `receiver`, `amount`) VALUES
 ('Brajesh', 'Ayush', 1000),
 ('Shreya', 'Brajesh', 1000),
 ('Brajesh', 'Ayush', 1000),
 ('Brajesh', 'Ayush', 1000),
 ('Brajesh', 'Ayush', 1),
-('Ayush', 'Brajesh', 10000);
+('Ayush', 'Brajesh', 10000),
+('Brajesh', 'Ayush', 1000),
+('Amrita', 'Brajesh', 1000),
+('Brajesh', 'Priya', 1000),
+('Brajesh', 'Ayush', 1000),
+('Brajesh', 'Ayush', 1000),
+('Brajesh', 'Ayush', 1000),
+('Brajesh', 'Lucky', 1000),
+('Brajesh', 'Ayush', 100),
+('Amrita', 'Brajesh', 300000);
 
 -- --------------------------------------------------------
 
@@ -62,12 +71,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`name`, `email`, `current_balance`) VALUES
-('Brajesh', 'Brajesh@gmail.com', 19799),
-('Ayush', 'Ayush@gmail.com', 12201),
+('Brajesh', 'Brajesh@gmail.com', 314699),
+('Ayush', 'Ayush@gmail.com', 16301),
 ('Shreya', 'Shreya@gmail.com', 39000),
-('Lucky', 'Lucky@gmail.com', 50000),
-('Priya', 'Priya@gmail.com', 30000),
-('Amrita', 'Amrita@gmail.com', 700000),
+('Lucky', 'Lucky@gmail.com', 51000),
+('Priya', 'Priya@gmail.com', 31000),
+('Amrita', 'Amrita@gmail.com', 399000),
 ('abhishek', 'abhishek@gmail.com', 19000),
 ('divya', 'divya@gmail.com', 10000);
 COMMIT;
