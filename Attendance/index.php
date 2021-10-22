@@ -1,6 +1,7 @@
 <?php   
     $title='Index';
     require 'includes/header.php';
+    require_once './db/conn.php';
 ?>
 
 <!-- Body -->
