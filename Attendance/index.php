@@ -36,17 +36,17 @@
         <input type="date" class="form-control" id="dob" name="dob">
     </div>
     <div class="form-group col-md-6">
-        <label for="speciality">Speciality</label>
-        <select id="speciality" class="form-control" name="speciality">
+        <label for="specialty">Speciality</label>
+        <select id="specialty" class="form-control" name="specialty">
             <option selected>Choose...</option>
-            <option value="Database Admin">Database Admin</option>
-            <option value="Software Developer">Software Developer</option>
-            <option value="Web Administrator">Web Administrator</option>
-            <option value="Other">Other</option>
+            <option value="1">Database Admin</option>
+            <option value="2">Software Developer</option>
+            <option value="3">Web Administrator</option>
+            <option value="">Other</option>
         </select>
     </div>
   </div>
-  <button type="submit" class="btn btn-secondary btn-lg btn-block">Submit</button>
+  <button type="submit" name="submit" class="btn btn-secondary btn-lg btn-block">Submit</button>
 </form>
 
 <!-- Ending of body -->
