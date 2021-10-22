@@ -12,7 +12,7 @@
         $dob=$_POST['dob'];
         $specialty=$_POST['specialty'];
         // call function to insert and track if success or not
-        $issuccess = $crud->insert($fname,$lname,$email,$contact,$dob,$specialty);
+        $issuccess = $crud->insertAttendees($fname,$lname,$email,$contact,$dob,$specialty);
 
         if($issuccess){
             echo ' <h1 class="text-center text-success">You Have Been Registered</h1>';

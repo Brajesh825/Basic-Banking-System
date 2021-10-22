@@ -9,7 +9,7 @@
         }
 
         //function to insert a new record into the attendee database
-        public function insert($fname,$lname,$email,$contact,$dob,$specialty){
+        public function insertAttendees($fname,$lname,$email,$contact,$dob,$specialty){
             try {
                 // define sql statement to be executed
                 $sql = "INSERT INTO attendee(firstname,lastname,emailaddress,contactnumber,dateofbirth,specialty_id) VALUES (:fname,:lname,:email,:contact,:dob,:specialty)";
@@ -31,6 +31,18 @@
                 return false;
             }
         }
+        public function getAttendees(){
+            $sql = "select * from `attendee`";
+            $result = $this->db->query($sql);
+            return $result;
+        }
+
+        public function getSpecialty(){
+            $sql = "select * from `specialties`";
+            $result = $this->db->query($sql);
+            return $result;
+        }
+
     }
 
 ?>
