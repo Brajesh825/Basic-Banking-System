@@ -1,6 +1,3 @@
-    <div>
-          <?php echo 'Copyright '.date('y'); ?>
-    </div>
   </div>
   <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
