@@ -40,7 +40,6 @@
     <div class="form-group col-md-6">
         <label for="specialty">Speciality</label>
         <select id="specialty" class="form-control" name="specialty">
-            <option selected>Choose...</option>
             <?php while($r = $results->fetch(PDO::FETCH_ASSOC)){ ?>
             <option value=<?php echo $r['specialty_id'] ?>><?php echo $r['name']?></option>
             <?php } ?>

@@ -32,7 +32,7 @@
             }
         }
         public function getAttendees(){
-            $sql = "select * from `attendee`";
+            $sql = "select * from `attendee`a inner join specialties s on a.specialty_id = s.specialty_id ";
             $result = $this->db->query($sql);
             return $result;
         }

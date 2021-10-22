@@ -24,7 +24,7 @@
             <td><?php echo $r['dateofbirth']; ?></td>
             <td><?php echo $r['emailaddress']; ?></td>
             <td><?php echo $r['contactnumber']; ?></td>
-            <td><?php echo $r['specialty_id']; ?></td>
+            <td><?php echo $r['name']; ?></td>
         </tr>
         <?php } ?>
     </table>
