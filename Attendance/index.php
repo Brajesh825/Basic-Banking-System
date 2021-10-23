@@ -46,7 +46,7 @@
         </select>
     </div>
   </div>
-  <button type="submit" name="submit" class="btn btn-secondary btn-lg btn-block">Submit</button>
+  <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
 </form>
 
 <!-- Ending of body -->

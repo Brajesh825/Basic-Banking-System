@@ -20,11 +20,12 @@
             <td><?php echo $r['firstname']; ?></td>
             <td><?php echo $r['lastname']; ?></td>
             <td><?php echo $r['name']; ?></td>
-            <td><a href="view.php?id=<?php echo $r['attendee_id']; ?>" class="btn btn-primary">View</a></td>
+            <td>
+                <a href="view.php?id=<?php echo $r['attendee_id']; ?>" class="btn btn-primary">View</a>
+                <a href="edit.php?id=<?php echo $r['attendee_id']; ?>" class="btn btn-warning">Edit</a>
+            </td>
         </tr>
         <?php } ?>
     </table>
-
-
 
 <?php require 'includes/footer.php'; ?>
