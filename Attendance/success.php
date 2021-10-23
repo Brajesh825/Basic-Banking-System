@@ -22,19 +22,6 @@
     }
 ?>
    
-    <!-- This print out the value passes to the action page using method="get" -->
-    <!-- <div class="card"  style="width: 22rem;">
-        <div class="card-body text-center">
-            <h5 class="card-title"><?php echo $_GET['firstname']." ".$_GET['lastname'];?></h5>
-            <h6 class="card-subtitle"><?php echo $_GET['speciality'];?></h6>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Email: <?php echo $_GET['email'];?></li>
-            <li class="list-group-item">Contact: <?php echo $_GET['contact'];?></li>
-            <li class="list-group-item">Dob: <?php echo $_GET['dob'];?></li>
-        </ul>
-    </div> -->
-
     <!-- This print out the value passes to the action page using method="post" -->
     <div class="card"  style="width: 22rem;">
         <div class="card-body text-center">

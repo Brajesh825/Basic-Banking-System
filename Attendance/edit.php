@@ -19,7 +19,8 @@
 
 <h1 class="text-center">Registration for IT Conference</h1>
 
-<form method="post" action="success.php">
+<form method="post" action="editpost.php">
+  <input type="hidden" name="id" value ="<?php echo $attendee['attendee_id']; ?>">
   <div class="form-row">
     <div class="form-group col-md-6">
         <label for="firstname">First Name</label>
@@ -56,7 +57,7 @@
     </div>
   </div>
   <button type="submit" name="submit" class="btn btn-success btn-lg btn-block">Save Changes</button>
-</form>
+</input>
 
 <!-- Ending of body -->
 <?php }} ?>
