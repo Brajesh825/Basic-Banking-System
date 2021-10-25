@@ -6,12 +6,13 @@
     $results = $crud->getSpecialty();
 
     if(!isset($_GET['id'])){
-        echo '<h1 class="text-danger">Please check details and try again</h1>';
+       include 'includes/errormessage.php';
     }else{
         $id = $_GET['id'];
         $attendee = $crud->getAttendeeDetails($id);
         if(!$attendee){
-            echo '<h1 class="text-danger">Please check details and try again</h1>';        
+            include 'includes/errormessage.php';
+            header("Location: viewrecords.php");
         }else{
 ?>
 

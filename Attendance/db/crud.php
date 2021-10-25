@@ -55,26 +55,54 @@
             }
         }
         public function getAttendees(){
-            $sql = "select * from `attendee`a inner join specialties s on a.specialty_id = s.specialty_id ";
-            $result = $this->db->query($sql);
-            return $result;
+            try {
+                $sql = "select * from `attendee`a inner join specialties s on a.specialty_id = s.specialty_id ";
+                $result = $this->db->query($sql);
+                return $result;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
         }
 
         public function getAttendeeDetails($id){
-            $sql = "select * from `attendee`a inner join specialties s on a.specialty_id = s.specialty_id where attendee_id = :id ";
-            $stmt = $this->db->prepare($sql);
-            $stmt->bindparam(':id',$id);
-            $stmt->execute();
-            $result= $stmt->fetch();
-            return $result;
+            try{
+                $sql = "select * from `attendee`a inner join specialties s on a.specialty_id = s.specialty_id where attendee_id = :id ";
+                $stmt = $this->db->prepare($sql);
+                $stmt->bindparam(':id',$id);
+                $stmt->execute();
+                $result= $stmt->fetch();
+                return $result;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+        }
         }
 
         public function getSpecialty(){
-            $sql = "select * from `specialties`";
-            $result = $this->db->query($sql);
-            return $result;
+            try{
+                $sql = "select * from `specialties`";
+                $result = $this->db->query($sql);
+                return $result;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+        }
         }
         
+        public function deleteAttendee($id){
+            try {
+                $sql = "delete from attendee where attendee_id = :id";
+                $stmt = $this->db->prepare($sql);
+                $stmt->bindparam(':id',$id);
+                $result=$stmt->execute();
+                return $result;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+
+        }
     }
 
 ?>

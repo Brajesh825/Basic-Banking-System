@@ -14,17 +14,17 @@
   <div class="form-row">
     <div class="form-group col-md-6">
         <label for="firstname">First Name</label>
-        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter your first name">
+        <input required type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter your first name">
     </div>
     <div class="form-group col-md-6">
         <label for="lastname">Last Name</label>
-        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter your last name">
+        <input required type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter your last name">
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
     <label for="email">Email address</label>
-    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+    <input required type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group col-md-6">
