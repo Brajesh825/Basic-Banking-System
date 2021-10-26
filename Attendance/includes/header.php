@@ -1,6 +1,9 @@
-<?
-  include './includes/session.php';
-?>
+
+<?php 
+//This includes the session file. This file contains code that starts/resumes a session. 
+//By having it in the header file, it will be included on every page, allowing session capability to be used on every page across the website.
+include_once 'includes/session.php'?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,9 +13,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-    <title>Attendance-<?php echo $title ?></title>
+    <link rel="stylesheet" href="css/site.css" />
+    
+    <title>Attendance - <?php echo $title ?></title>
   </head>
   <body>
   <div class="container">
@@ -27,8 +32,16 @@
           <a class="nav-item nav-link" href="viewrecords.php">View Attendees</a>
         </div>
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="login.php">Login<span class="sr-only">(current)</span></a>
+          <?php 
+              if(!isset($_SESSION['userid'])){
+          ?>
+            <a class="nav-item nav-link" href="login.php">Login <span class="sr-only">(current)</span></a>
+          <?php } else { ?>
+            <a class="nav-item nav-link" href="#"><span>Hello <?php echo $_SESSION['username'] ?>! </span> <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="logout.php">Logout <span class="sr-only">(current)</span></a>
+          <?php } ?>
         </div>
       </div>
     </nav>
-  <br>
+    
+    <br/>

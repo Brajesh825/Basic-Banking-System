@@ -1,6 +1,6 @@
 <?php   
     $title='Delete Record';
-    require 'includes/header.php';
+    require_once './includes/auth_check.php';
     require_once './db/conn.php';
 
     if(!isset($_GET['id'])){
@@ -15,7 +15,7 @@
         if($result){
             header("Location:viewrecords.php");
         }else{
-
+            header("Location:viewrecords.php");
         }
     }
 
