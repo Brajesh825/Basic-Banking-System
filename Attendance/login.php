@@ -21,25 +21,29 @@
 
     }
 ?>
+<link rel="stylesheet" href="./css/style.css">
+<div class="login">
+  <h1>Login</h1>
+  <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
+    <p><input type="text" name="username" value="" placeholder="Username or Email"></p>
+    <p><input type="password" name="password" value="" placeholder="Password"></p>
+    <p class="remember_me">
+      <label>
+        <input type="checkbox" name="remember_me" id="remember_me">
+        Remember me on this computer
+      </label>
+    </p>
+    <p class="submit"><input type="submit" name="commit" value="Login"></p>
+  </form>
+</div>
 
-<h1 class="text-center"><?php echo $title ?> </h1>
-   
-    <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
-        <table class="table table-sm">
-            <tr>
-                <td><label for="username">Username: * </label></td>
-                <td><input type="text" name="username" class="form-control" id="username" value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') echo $_POST['username']; ?>">
-                </td>
-            </tr>
-            <tr>
-                <td><label for="password">Password: * </label></td>
-                <td><input type="password" name="password" class="form-control" id="password">
-                </td>
-            </tr>
-        </table><br/><br/>
-        <input type="submit" value="Login" class="btn btn-primary btn-block"><br/>
-        <a href="#"> Forgot Password </a>
-            
-    </form><br/><br/><br/><br/>
-
+<div class="login-help">
+  <p>Forgot your password? <a href="#">Click here to reset it</a>.</p>
+</div>
 <?php include_once 'includes/footer.php'?>
+
+<script>
+    const navbar=document.querySelector('.navbar')
+    navbar.classList.remove('bg-primary')
+    navbar.classList.add('login-nav')
+</script>

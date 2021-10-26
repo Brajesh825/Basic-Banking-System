@@ -9,7 +9,7 @@
 <!-- Body -->
 
 <h1 class="text-center">Registration for IT Conference</h1>
-
+<br>
 <form method="post" action="success.php">
   <div class="form-row">
     <div class="form-group col-md-6">
@@ -46,7 +46,7 @@
         </select>
     </div>
   </div>
-  <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+  <button type="submit" name="submit" class="btn btn-lg btn-block submit-btn">Submit</button>
 </form>
 
 <!-- Ending of body -->
