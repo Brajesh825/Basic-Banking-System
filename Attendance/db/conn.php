@@ -15,6 +15,7 @@
     }
 
     require './db/crud.php';
+    require './user.php';
     $crud = new crud($pdo);
-
+    $user = new user($pdo);
 ?>
