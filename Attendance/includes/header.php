@@ -1,3 +1,6 @@
+<?
+  include './includes/session.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/site.css">
 
-    <title>Attendence-<?php echo $title ?></title>
+    <title>Attendance-<?php echo $title ?></title>
   </head>
   <body>
   <div class="container">
@@ -19,9 +22,12 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+        <div class="navbar-nav mr-auto">
           <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="viewrecords.php">View Attendees</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="login.php">Login<span class="sr-only">(current)</span></a>
         </div>
       </div>
     </nav>
