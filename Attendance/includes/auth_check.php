@@ -1,5 +1,5 @@
 <?php
     if(!isset($_SESSION['userid'])){
-        header("Location: login.php");
+        echo "<script type='text/javascript'> document.location = './login.php'; </script>";
     }
 ?>

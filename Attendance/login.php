@@ -17,6 +17,7 @@
             $_SESSION['username'] = $username;
             $_SESSION['userid'] = $result['id'];
             header("Location: viewrecords.php");
+            exit;
         }
 
     }

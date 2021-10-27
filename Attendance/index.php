@@ -1,6 +1,7 @@
 <?php   
     $title='Index';
     require 'includes/header.php';
+    require_once './includes/auth_check.php';
     require_once './db/conn.php';
 
     $results = $crud->getSpecialty();
@@ -8,8 +9,6 @@
 
 <!-- Body -->
 
-<h1 class="text-center">Registration for IT Conference</h1>
-<br>
 <form method="post" action="success.php">
   <div class="form-row">
     <div class="form-group col-md-6">

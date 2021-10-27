@@ -19,8 +19,6 @@
 
 <!-- Body -->
 
-<h1 class="text-center">Registration for IT Conference</h1>
-
 <form method="post" action="editpost.php">
   <input type="hidden" name="id" value ="<?php echo $attendee['attendee_id']; ?>">
   <div class="form-row">
