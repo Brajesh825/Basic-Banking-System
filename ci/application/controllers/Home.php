@@ -4,6 +4,12 @@
     
     class Home extends CI_Controller {
     
+        public function __construct()
+        {
+            parent::__construct();
+            $this->load->model('Users');
+        }
+
         public function index()
         {
            $this->load->view('inc/header');            
@@ -27,7 +33,18 @@
                     'u_name' => $u_name,
                     'u_pass' => $u_pass
                 );
-                print_r ($user_data);
+
+                $user_list=$this->db->get_where('users',array('u_name' => $user_data['u_name']));
+                foreach($user_list->result() as $user)
+                {
+                    if($user_data['u_name'] == $user->u_name && $user_data['u_pass'] == $user->u_pass )
+                    {
+                        echo "Success";
+                    }else{
+                        echo "<script>alert('Username or Password Incorrect');</script>";
+                        redirect('home','refresh');
+                    }
+                }
             }else{
                 redirect('home','refresh');
             }
@@ -44,7 +61,9 @@
                     'u_name' => $u_name,
                     'u_pass' => $u_pass
                 );
-                print_r ($user_data);
+                $this->Users->insert_user($user_data);
+                redirect('home','refresh');
+
             }else{
                 redirect('home','refresh');
             }
