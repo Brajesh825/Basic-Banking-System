@@ -39,7 +39,8 @@
                 {
                     if($user_data['u_name'] == $user->u_name && $user_data['u_pass'] == $user->u_pass )
                     {
-                        echo "Success";
+                        $_SESSION['u_name'] = $user_data['u_name'];
+                        redirect('dash','refresh');
                     }else{
                         echo "<script>alert('Username or Password Incorrect');</script>";
                         redirect('home','refresh');
@@ -63,13 +64,16 @@
                 );
                 $this->Users->insert_user($user_data);
                 redirect('home','refresh');
-
             }else{
                 redirect('home','refresh');
             }
         }
+        public function logout(){
+            session_unset();
+            session_destroy();
+            redirect('home','refresh');
+        }
     }
-    
     /* End of file Home.php */
     
 ?>
