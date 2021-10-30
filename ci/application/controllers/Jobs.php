@@ -14,6 +14,12 @@
             $this->load->view('dash/add_job');
         }
         
+        public function view_jobs()
+        {
+            $this->load->view('dash/job_list');
+            
+        }
+
         public function add_jobs()
         {
             if( $this->input->post('add_job'))
@@ -23,10 +29,35 @@
                 $jobs_data = array(
                     'j_name' => $j_name
                 );
-
                 $this->Employee_Jobs->add_jobs($jobs_data);
             }
-            redirect('dash','refresh');
+            redirect('jobs/','refresh');
+        }
+
+        public function update_job($j_id)
+        {
+            $this->load->view('dash/update_job',$j_id);
+        }
+        public function update_process_jobs($j_id)
+        {
+            if($this->input->post('update_job'))
+            {
+                $j_name = $this->input->post('j_name');
+                $jobs_details = array(
+                    'j_name' => $j_name
+                );
+                $this->db->where('j_id',$j_id);
+                $this->db->update('jobs',$jobs_details);
+            }
+            redirect('jobs/view_jobs','refresh');
+        }
+        public function delete_job($j_id)
+        {
+            
+            $this->db->where('j_id', $j_id);
+            $this->db->delete('jobs');
+
+            redirect('jobs/view_jobs','refresh');
         }
     }
     

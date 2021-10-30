@@ -9,6 +9,6 @@
         <div class="panel-heading">Jobs Actions</div>
         <div class="list-group">
         <a href="<?php echo site_url(); ?>jobs" class="list-group-item">Add Jobs</a>
-        <a href="" class="list-group-item">Jobs List</a>
+        <a href="<?php echo site_url(); ?>jobs/view_jobs" class="list-group-item">Jobs List</a>
        </div>
     </div>
