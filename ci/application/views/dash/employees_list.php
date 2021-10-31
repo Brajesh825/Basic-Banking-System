@@ -45,9 +45,9 @@ if(!$_SESSION['u_name']){
                       <tr>
                         <td><?php echo $employee->e_id; ?></td>
                         <td><?php echo $employee->e_name; ?></td>
-                        <td><a href="<?php echo site_url(); ?>employees/view/<?php echo $employee->e_id; ?> " class="btn btn-info btn-xs btn-block">Details</></td>
-                        <td><a href="<?php echo site_url(); ?>employees/update/<?php echo $employee->e_id; ?> " class="btn btn-warning btn-block btn-xs">Edit</a></td>
-                        <td><a href="<?php echo site_url(); ?>employees/delete/<?php echo $employee->e_id; ?> "" class="btn btn-danger btn-block btn-xs">Delete</a></td>            
+                        <td><a href="<?php echo site_url(); ?>employees/single_employee/<?php echo $employee->e_id; ?> " class="btn btn-info btn-xs btn-block">Details</></td>
+                        <td><a href="<?php echo site_url(); ?>employees/update_employee/<?php echo $employee->e_id; ?> " class="btn btn-warning btn-block btn-xs">Edit</a></td>
+                        <td><a href="<?php echo site_url(); ?>employees/delete_employee/<?php echo $employee->e_id; ?> "" class="btn btn-danger btn-block btn-xs">Delete</a></td>            
                       </tr>
                       <?php
                     }
