@@ -9,7 +9,6 @@
 
     <table class="table table-striped table-dark">
         <tr>
-            <!-- <th>#</th> -->
             <th>First Name</th>
             <th>Last Name</th>
             <th>Specialty</th>

@@ -25,7 +25,6 @@
             if( $this->input->post('add_job'))
             {
                 $j_name= $this->input->post('j_name');
-
                 $jobs_data = array(
                     'j_name' => $j_name
                 );
