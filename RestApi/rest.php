@@ -2,7 +2,10 @@
     class Rest{
         public function __construct()
         {
-            
+           $handler = fopen('php://input','r');
+           $request = stream_get_contents($handler);
+           echo $request;
+
         }
 
         public function validateRequest()
@@ -30,4 +33,5 @@
 
 
         }
+    }
 ?>
