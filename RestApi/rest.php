@@ -40,11 +40,42 @@
 
         public function processApi()
         {
+            $api = new API;
+            // Reflection Method
+            $rMethod = new ReflectionMethod('API',$this->serviceName);
 
+            if(!method_exists($api,$this->serviceName)){
+                $this->ThrowError(API_DOST_NOT_EXIST,"API does not exist");
+            }
+            $rMethod->invoke($api);
         }
 
-        public function validateParameters($fieldName,$value,$dataType,$required)
+        public function validateParameters($fieldName,$value,$dataType,$required = true)
         {
+            // validate where it exist
+            if($required == true && empty($value) == true)
+            {
+                $this->ThrowError(VALIDATE_PARAMETER_REQUIRED, $value ." parameter is required");
+            }
+            // validate for data type
+            switch ($dataType) {
+                case BOOLEAN:
+                    if(!is_bool($value)){
+                        $this->ThrowError(VALIDATE_PARAMETER_DATATYPE,"Datatype is not valid for " . $fieldName) . ". It should be boolean";
+                    }
+                    break;
+                case INTEGER:
+                    if(!is_numeric($value)){
+                        $this->ThrowError(VALIDATE_PARAMETER_DATATYPE,"Datatype is not valid for " . $fieldName . ". It should be numeric");
+                    }
+                    break;
+                case STRING:
+                        if(!is_string($value)){
+                            $this->ThrowError(VALIDATE_PARAMETER_DATATYPE,"Datatype is not valid for " . $fieldName . ". It should be string");
+                        }
+                        break;               
+            }
+            return $value;
 
         }
 
