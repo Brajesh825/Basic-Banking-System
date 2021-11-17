@@ -4,7 +4,7 @@
 
         protected $request;
         protected $serviceName;
-        protected $params;
+        protected $param;
 
         public function __construct()
         {
@@ -25,17 +25,21 @@
             if($_SERVER['CONTENT_TYPE'] !== 'application/json'){
                 $this->ThrowError(REQUEST_CONTENTTYPE_NOT_VALID,"REQUEST_CONTENTTYPE_NOT_VALID");
             }
-            $data = json_decode($this->request);
+            $data = json_decode($this->request,true);
+
 
             if(!isset($data['name']) || $data['name'] == ""){
                 $this->ThrowError(API_NAME_REQUIRED,"API name required");
             }
             $this->serviceName = $data['name'];
 
+
             if(!is_array($data['param']) ){
                 $this->ThrowError(API_PARAM_REQUIRED,"API Param is required");
             }
             $this->param = $data['param'];
+
+            
         }
 
         public function processApi()
@@ -73,7 +77,10 @@
                         if(!is_string($value)){
                             $this->ThrowError(VALIDATE_PARAMETER_DATATYPE,"Datatype is not valid for " . $fieldName . ". It should be string");
                         }
-                        break;               
+                        break;    
+                default :
+                $this->ThrowError(VALIDATE_PARAMETER_DATATYPE,"Datatype is not valid for " . $fieldName);
+                        break;           
             }
             return $value;
 
@@ -87,9 +94,12 @@
             exit;
         }
 
-        public function returnResponse()
+        public function returnResponse($code,$data)
         {
-
+            header("content_type: application/json");
+            $response= json_encode(['response'=>['status'=>$code,'result'=>$data]]);
+            echo $response;
+            exit;
 
         }
     }
