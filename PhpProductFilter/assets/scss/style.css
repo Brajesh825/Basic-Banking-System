@@ -1,0 +1,97 @@
+.container {
+  margin: 1rem 6rem 1rem 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #bd9090;
+}
+
+.container .filterMenu {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #c0c0eb;
+}
+
+.container .filterMenu .brand {
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.container .filterMenu .brand .brandList {
+  height: 11rem;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.container .filterMenu .brand .brandList::-webkit-scrollbar {
+  width: 0;
+}
+
+.container .filterMenu .brand .brandList .brandItem:first-child {
+  border-top: 0.5px solid #6d3535;
+}
+
+.container .filterMenu .brand .brandList .brandItem {
+  border-left: 0.5px solid #6d3535;
+  border-right: 0.5px solid #6d3535;
+  border-bottom: 0.5px solid #6d3535;
+  padding: 0.5rem;
+}
+
+.products {
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  background-color: pink;
+}
+
+.container .filterMenu .ram {
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.container .filterMenu .ram .ramList {
+  height: 11rem;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.container .filterMenu .ram .ramList::-webkit-scrollbar {
+  width: 0;
+}
+
+.container .filterMenu .ram .ramList .ramItem:first-child {
+  border-top: 0.5px solid #6d3535;
+}
+
+.container .filterMenu .ram .ramList .ramItem {
+  border-left: 0.5px solid #6d3535;
+  border-right: 0.5px solid #6d3535;
+  border-bottom: 0.5px solid #6d3535;
+  padding: 0.5rem;
+}
+
+.container .filterMenu .internal {
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.container .filterMenu .internal .internalList {
+  height: 11rem;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.container .filterMenu .internal .internalList::-webkit-scrollbar {
+  width: 0;
+}
+
+.container .filterMenu .internal .internalList .internalItem:first-child {
+  border-top: 0.5px solid #6d3535;
+}
+
+.container .filterMenu .internal .internalList .internalItem {
+  border-left: 0.5px solid #6d3535;
+  border-right: 0.5px solid #6d3535;
+  border-bottom: 0.5px solid #6d3535;
+  padding: 0.5rem;
+}
+/*# sourceMappingURL=style.css.map */

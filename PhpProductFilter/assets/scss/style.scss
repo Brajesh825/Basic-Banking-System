@@ -1,0 +1,81 @@
+.container{
+    margin: 1rem 6rem 1rem 6rem;
+    display: flex;
+    background-color: rgb(189, 144, 144);
+}
+.container .filterMenu{
+    flex-grow: 1;
+    background-color: rgb(192, 192, 235);
+}
+.container .filterMenu .brand{
+    padding: 1rem 2rem 1rem 2rem;
+}
+.container .filterMenu .brand .brandList{
+    height: 11rem;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.container .filterMenu .brand .brandList::-webkit-scrollbar{
+    width: 0;
+}
+
+.container .filterMenu .brand .brandList .brandItem:first-child{
+    border-top: 0.5px solid rgb(109, 53, 53);
+}
+
+.container .filterMenu .brand .brandList .brandItem{
+    border-left: 0.5px solid rgb(109, 53, 53);
+    border-right: 0.5px solid rgb(109, 53, 53);
+    border-bottom: 0.5px solid rgb(109, 53, 53);
+    padding: 0.5rem;
+}
+.products{
+    flex-grow: 3;
+    background-color: pink;
+}
+
+.container .filterMenu .ram{
+    padding: 1rem 2rem 1rem 2rem;
+}
+.container .filterMenu .ram .ramList{
+    height: 11rem;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.container .filterMenu .ram .ramList::-webkit-scrollbar{
+    width: 0;
+}
+
+.container .filterMenu .ram .ramList .ramItem:first-child{
+    border-top: 0.5px solid rgb(109, 53, 53);
+}
+
+.container .filterMenu .ram .ramList .ramItem{
+    border-left: 0.5px solid rgb(109, 53, 53);
+    border-right: 0.5px solid rgb(109, 53, 53);
+    border-bottom: 0.5px solid rgb(109, 53, 53);
+    padding: 0.5rem;
+}
+
+.container .filterMenu .internal{
+    padding: 1rem 2rem 1rem 2rem;
+}
+.container .filterMenu .internal .internalList{
+    height: 11rem;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.container .filterMenu .internal .internalList::-webkit-scrollbar{
+    width: 0;
+}
+
+.container .filterMenu .internal .internalList .internalItem:first-child{
+    border-top: 0.5px solid rgb(109, 53, 53);
+}
+
+.container .filterMenu .internal .internalList .internalItem{
+    border-left: 0.5px solid rgb(109, 53, 53);
+    border-right: 0.5px solid rgb(109, 53, 53);
+    border-bottom: 0.5px solid rgb(109, 53, 53);
+    padding: 0.5rem;
+}
